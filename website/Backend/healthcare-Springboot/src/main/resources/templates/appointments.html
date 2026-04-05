@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Appointments</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 30px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">All Booked Appointments</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Patient Name</th>
+        <th>Email</th>
+        <th>Doctor</th>
+        <th>Date</th>
+        <th>Status</th> <!-- NEW COLUMN -->
+    </tr>
+
+    <tr th:each="a : ${appointments}">
+        <td th:text="${a.id}"></td>
+        <td th:text="${a.patientName}"></td>
+        <td th:text="${a.email}"></td>
+        <td th:text="${a.doctorName}"></td>
+        <td th:text="${a.appointmentDate}"></td>
+        <td th:text="${a.status}"></td> <!-- NEW FIELD -->
+    </tr>
+
+</table>
+
+</body>
+</html>
