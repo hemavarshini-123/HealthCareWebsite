@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+
+}
+
+/* Full height layout */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Makes route content expand */
+.main-content {
+  flex: 1;
+}
